@@ -1,0 +1,757 @@
+/* iphone 14 pro max */
+@media only screen and (min-width: 430px) and (max-width: 767px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Montserrat', 'Arial', sans-serif;
+      }
+      /* header-nav start */
+      #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px; /* Adjusted padding */
+        position: fixed;
+        width: 100%; /* Full width */
+        background-color: #111;
+        opacity: 80%;
+        margin-top: -20rem;
+        z-index: 1;
+    }
+    
+    #header ul {
+        /* display: flex; */
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header ul li {
+        list-style: none;
+        padding: 10px 10px; /* Adjusted padding */
+        font-size: 3rem; /* Adjusted font-size */
+        font-weight: bolder;
+    }
+    
+    #header ul li a {
+        text-decoration: none;
+        font-size: 14px; /* Adjusted font-size */
+        transition: 0.3s ease-in-out;
+        color: #000000;
+        font-weight: 400;
+    }
+    
+    #header ul li a:hover {
+        border-bottom: 3px solid red;
+    }
+    
+    #header ul li img {
+        margin-right: 15px; /* Adjusted margin */
+    }
+    
+    .toggle {
+        display: none;
+    }
+    
+    #header ul {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header.active1 ul {
+        opacity: 1;
+        top: 75px;
+    }
+    
+    #header ul li a {
+        margin: 5px 0;
+        font-size: 39px;
+        color: #fff;
+    }
+
+    .logo-img{
+         height: 10vh;
+        width: auto;
+    }
+    
+    .toggle {
+        display: block;
+        position: relative;
+        width: 30px; /* Adjusted width */
+        height: 30px; /* Adjusted height */
+        background-image: url(https://img.icons8.com/material-outlined/48/ffffff/menu--v1.png);
+        cursor: pointer;
+    }
+    
+    #header.active1 .toggle {
+        background-image: url(https://img.icons8.com/material-rounded/48/ffffff/multiply--v1.png);
+        background-repeat: no-repeat;
+    }
+
+
+
+     /* area 1 start */
+     .area1 {
+        flex-direction: column; /* Stack elements vertically */
+        margin-top: 20rem;
+        font-size: 2rem;
+        margin-left: 6rem;
+    }
+.titel{
+    margin-bottom: 2rem;
+}
+    
+    .info {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start;
+    }
+
+.info img{
+    height: auto;
+    width: 20rem;
+    border-radius: 30px;
+}
+    .subtotal,
+    .fragt,
+    .moms,
+    .total {
+        text-align: center; /* Center text for smaller screens */
+        display: flex;
+        flex-direction: row;
+        margin-left: 1rem;
+        /* gap: 20%; */
+    }
+
+.numbers{
+    margin-left: -5rem;
+    padding: 50px;
+}
+    .subtotal-2{
+        display: flex;
+        flex-direction: row;
+        gap: 70%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .fragt{
+        display: flex;
+        gap: 80%;
+        margin-bottom: 1rem;
+
+    }
+
+    .moms{
+        display: flex;
+        gap: 79%;
+        margin-bottom: 1rem;
+        color: gray;
+
+    }
+
+
+
+
+
+    .subtotal{
+        display: none;
+    }
+    
+    .gone-19{
+        display: none;
+    }
+
+   
+    .box{
+        background-color: rgb(189, 187, 187);
+        gap: 3rem;
+        height: 44px;
+        width: 150px ;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+       
+    }
+    .box .quantity-btn{
+    height: auto;
+    width: 45px;
+}
+
+    .checkout-box {
+        margin-top: 20px; /* Add some spacing between Total and Checkout */
+        background-color: rgb(205, 200, 200);
+        width: 50vh;
+        /* width: 117%; */
+        height: auto;
+        margin-top: 1rem;
+        padding-top: 10px;
+        padding-left: 7rem;
+        margin-bottom: 10rem;
+        margin-left: -2rem;
+    }
+
+    
+
+.line1 {
+    display: none;
+  }
+ 
+
+
+
+
+
+  .line2 {
+    font-size: 20px;
+    
+  }
+
+  .line3 {
+    font-size: 20px;
+    
+  }
+  
+
+
+ 
+    /* area 2 end */
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is ipad mini  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Montserrat', 'Arial', sans-serif;
+      }
+      /* header-nav start */
+      #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px; /* Adjusted padding */
+        position: fixed;
+        width: 100%; /* Full width */
+        background-color: #111;
+        opacity: 80%;
+        margin-top: -20rem;
+        z-index: 1;
+    }
+    
+    #header ul {
+        /* display: flex; */
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header ul li {
+        list-style: none;
+        padding: 10px 10px; /* Adjusted padding */
+        font-size: 3rem; /* Adjusted font-size */
+        font-weight: bolder;
+    }
+    
+    #header ul li a {
+        text-decoration: none;
+        font-size: 14px; /* Adjusted font-size */
+        transition: 0.3s ease-in-out;
+        color: #000000;
+        font-weight: 400;
+    }
+
+    
+    
+    #header ul li a:hover {
+        border-bottom: 3px solid red;
+    }
+    
+    #header ul li img {
+        margin-right: 15px; /* Adjusted margin */
+    }
+    
+    .toggle {
+        display: none;
+    }
+    
+    #header ul {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header.active1 ul {
+        opacity: 1;
+        top: 75px;
+    }
+    
+    #header ul li a {
+        margin: 5px 0;
+        font-size: 42px;
+        color: #fff;
+    }
+
+    .logo-img{
+         height: 10vh;
+        width: auto;
+    }
+    
+    .toggle {
+        display: block;
+        position: relative;
+        width: 30px; /* Adjusted width */
+        height: 30px; /* Adjusted height */
+        background-image: url(https://img.icons8.com/material-outlined/48/ffffff/menu--v1.png);
+        cursor: pointer;
+    }
+    
+    #header.active1 .toggle {
+        background-image: url(https://img.icons8.com/material-rounded/48/ffffff/multiply--v1.png);
+        background-repeat: no-repeat;
+    }
+
+
+
+
+
+    /* area 1 start */
+    .area1 {
+        flex-direction: column; /* Stack elements vertically */
+        margin-top: 20rem;
+        font-size: 2rem;
+        margin-left: 6rem;
+    }
+
+    
+    .info {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start;
+    }
+
+.info img{
+    height: auto;
+    width: 10rem;
+    border-radius: 30px;
+}
+    .subtotal,
+    .fragt,
+    .moms,
+    .total {
+        text-align: center; /* Center text for smaller screens */
+        display: flex;
+        flex-direction: row;
+        margin-left: 1rem;
+        /* gap: 20%; */
+    }
+
+
+
+    .subtotal-2{
+        display: flex;
+        flex-direction: row;
+        gap: 42%;
+        margin-top: 1rem;
+    }
+
+    .fragt{
+        display: flex;
+        gap: 48%;
+    }
+
+    .moms{
+        display: flex;
+        gap: 20%;
+        color: gray;
+    }
+
+
+
+
+
+    .subtotal{
+        display: none;
+    }
+    
+    .gone-19{
+        display: none;
+    }
+
+   
+    .box{
+        background-color: rgb(189, 187, 187);
+        gap: 3rem;
+        height: 44px;
+        width: 150px ;
+    }
+    .box .quantity-btn{
+    height: auto;
+    width: 45px;
+}
+
+    .checkout-box {
+        margin-top: 20px; /* Add some spacing between Total and Checkout */
+        background-color: rgb(205, 200, 200);
+        width: 60vh;
+        height: auto;
+        margin-top: 1rem;
+        padding-top: 10px;
+        padding-left: 7rem;
+    }
+
+    
+/* coming back to this tommorow good luck Omar🤞🏽😉 */
+.line1 {
+    text-decoration: none; /* Remove default underline */
+    position: relative;
+    display: inline-block;
+    display: none;
+  }
+  
+  .line1::before {
+    content: ""; /* Empty content */
+    display: block;
+    width: 50%; /* Set the desired width */
+    border-bottom: 1px solid #000; /* Adjust the color as needed */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+    /* area 2 end */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is normal laptop */
+@media only screen and (min-width: 1025px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Montserrat', 'Arial', sans-serif;
+      }
+
+
+      /* header-nav start */
+      #header {
+        /* background: #000000;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        height: 5rem;
+        width: 89.9rem;
+        position: fixed;
+        margin-top: -5rem; */
+        background: #000000;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        height: 5rem;
+        width: 89.9rem;
+        position: fixed;
+        margin-top: -10rem;
+        /* padding-top: 20rem; */
+
+
+      }
+      #header ul {
+        display: flex;
+      }
+      
+      #header ul li {
+        list-style: none;
+        padding: 15px 15px;
+      }
+      #header ul li a {
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s ease-in-out;
+        color: white;
+        font-weight: 400;
+        opacity: 1;
+
+      }
+      
+      #header ul li a:hover {
+        border-bottom: 3px solid red;
+      }
+      
+      #header ul li img {
+        margin-right: 30px;
+      }
+      
+      .logo-img {
+        color: #fff;
+        height: 10vh;
+        width: auto;
+        margin-top: -1rem;
+      }
+
+      .toggle {
+        display: none;
+      }
+      #header.active1 ul {
+        /* opacity: 1; */
+        top: 75px;
+      }
+    
+      #header ul li a {
+        margin: 5px 0;
+        font-size: 24px;
+        color: white;
+      }
+    /* header-nav end */
+
+
+/* area 1 styling start */
+.area1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10rem 10rem 10rem 10rem;
+    
+
+}
+
+h1{
+    margin-bottom: 4rem;
+}
+.info img{
+    height: auto;
+    width: 70px;
+    border-radius: 30px;
+}
+.titel{
+    display: flex;
+    flex-direction: row;
+    gap: 50rem;
+    margin-bottom: 2rem;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(189, 187, 187);
+    gap: 3rem;
+    height: 28px;
+    
+}
+
+.box .quantity-btn{
+    height: auto;
+    width: 20px;
+}
+
+u{
+    width: 1rem;
+}
+/* area 1 styling end */
+
+
+/* area 2 styling start  */
+
+
+
+
+
+.area2{
+    margin-top: 3rem;
+    margin-left: 48rem;
+}
+
+
+.subtotal{
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+
+}
+
+
+/* .fragt .moms .total .checkout-box */
+
+
+.subtotal-2{
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+}
+.fragt{
+    display: flex;
+    flex-direction: row;
+    gap: 57%;
+}
+
+.moms{
+    display: flex;
+    flex-direction: row;
+    gap: 32%;
+    color: gray;
+}
+
+.total{
+    display: flex;
+    flex-direction: row;
+    gap: 58%;
+}
+
+.checkout-box{
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    background-color: rgb(205, 200, 200);
+    width: auto;
+    height: 6vh;
+    margin-top: 1rem;
+    padding-top: 10px;
+    padding-left: 7rem;
+
+}
+/* area 2 styling end  */
+
+
+
+
+
+
+}

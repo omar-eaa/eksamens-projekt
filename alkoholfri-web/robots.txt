@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://alkoholfri-web.omar-gaal.dk/sitemap.xml

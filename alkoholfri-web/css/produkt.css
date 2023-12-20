@@ -1,0 +1,895 @@
+
+
+@media only screen and (min-width: 430px) and (max-width: 767px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Montserrat', 'Arial', sans-serif;
+      }
+      /* header-nav start */
+      #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px; /* Adjusted padding */
+        position: fixed;
+        width: 100%; /* Full width */
+        background-color: #111;
+        opacity: 80%;
+        margin-top: -20rem;
+        z-index: 1;
+    }
+    
+    #header ul {
+        /* display: flex; */
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header ul li {
+        list-style: none;
+        padding: 10px 10px; /* Adjusted padding */
+        font-size: 3rem; /* Adjusted font-size */
+        font-weight: bolder;
+    }
+    
+    #header ul li a {
+        text-decoration: none;
+        font-size: 14px; /* Adjusted font-size */
+        transition: 0.3s ease-in-out;
+        color: #000000;
+        font-weight: 400;
+    }
+    
+    #header ul li a:hover {
+        border-bottom: 3px solid red;
+    }
+    
+    #header ul li img {
+        margin-right: 15px; /* Adjusted margin */
+    }
+    
+    .toggle {
+        display: none;
+    }
+    
+    #header ul {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header.active1 ul {
+        opacity: 1;
+        top: 75px;
+    }
+    
+    #header ul li a {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .logo-img{
+         height: 10vh;
+        width: auto;
+    }
+    
+    .toggle {
+        display: block;
+        position: relative;
+        width: 30px; /* Adjusted width */
+        height: 30px; /* Adjusted height */
+        background-image: url(https://img.icons8.com/material-outlined/48/ffffff/menu--v1.png);
+        cursor: pointer;
+    }
+    
+    #header.active1 .toggle {
+        background-image: url(https://img.icons8.com/material-rounded/48/ffffff/multiply--v1.png);
+        background-repeat: no-repeat;
+    }
+
+
+
+/* product content start h1,h2 */
+#product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20rem; /* Adjust the margin-top as needed */
+    margin-left: 5rem; /* Adjust the margin-left as needed */
+    padding-top: 10rem;  /* changing the size of the titles h1, h2 */
+}
+
+#product-content h1 {
+    color: #000000; /* Black color for h1 */
+    font-size: 4rem; /* Adjust the font size as needed */
+}
+
+#product-content h2 {
+    color: #808080; /* Grey color for h2 */
+    font-size: 2.5rem; /* Adjust the font size as needed */
+}
+/* product content end h1,h2 */
+
+/* produckt display start */
+.product-display {
+    display: grid;
+    grid-template-columns: 1fr; /* Display as a column */
+    gap: 1rem;
+    margin-top: 40rem; /* Adjust the margin-top as needed */
+    margin-left: 1rem; /* Adjust the margin-left as needed */
+}
+
+.product-item {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    height: 240px; /* Set a fixed height or adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1rem; /* Adjust the margin-bottom as needed */
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* product display end  */
+
+
+.product-display {
+    display: grid;
+    grid-template-columns: 1fr; /* Display as a column */
+    gap: 1rem;
+    margin-top: 10rem; /* Adjust the margin-top as needed */
+    margin-left: 1rem; /* Adjust the margin-left as needed */
+}
+
+.product-item {
+    position: relative;
+    width: 90%; /* Full width of the container */
+    height: 240px; /* Set a fixed height or adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1rem; /* Adjust the margin-bottom as needed */
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay::after {
+    content: '\2192'; /* Right arrow character */
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+/* css scroll animation start */
+/* Container styles */
+.scrolling-text-container {
+    background-color: #eff5ff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+/* css scroll animation end */
+
+/* product display end  */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is ipad mini  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Montserrat', 'Arial', sans-serif;
+      }
+      /* header-nav start */
+      #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px; /* Adjusted padding */
+        position: fixed;
+        width: 100%; /* Full width */
+        background-color: #111;
+        opacity: 80%;
+        margin-top: -20rem;
+        z-index: 1;
+    }
+    
+    #header ul {
+        /* display: flex; */
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header ul li {
+        list-style: none;
+        padding: 10px 10px; /* Adjusted padding */
+        font-size: 3rem; /* Adjusted font-size */
+        font-weight: bolder;
+    }
+    
+    #header ul li a {
+        text-decoration: none;
+        font-size: 14px; /* Adjusted font-size */
+        transition: 0.3s ease-in-out;
+        color: #000000;
+        font-weight: 400;
+    }
+    
+    #header ul li a:hover {
+        border-bottom: 3px solid red;
+    }
+    
+    #header ul li img {
+        margin-right: 15px; /* Adjusted margin */
+    }
+    
+    .toggle {
+        display: none;
+    }
+    
+    #header ul {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 20px; /* Adjusted padding */
+        text-align: center;
+        overflow: auto;
+        background-color: #111;
+        flex-direction: column;
+        opacity: 0;
+    }
+    
+    #header.active1 ul {
+        opacity: 1;
+        top: 75px;
+    }
+    
+    #header ul li a {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .logo-img{
+         height: 10vh;
+        width: auto;
+    }
+    
+    .toggle {
+        display: block;
+        position: relative;
+        width: 30px; /* Adjusted width */
+        height: 30px; /* Adjusted height */
+        background-image: url(https://img.icons8.com/material-outlined/48/ffffff/menu--v1.png);
+        cursor: pointer;
+    }
+    
+    #header.active1 .toggle {
+        background-image: url(https://img.icons8.com/material-rounded/48/ffffff/multiply--v1.png);
+        background-repeat: no-repeat;
+    }
+
+
+
+/* product content start h1,h2 */
+#product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20rem; /* Adjust the margin-top as needed */
+    margin-left: 5rem; /* Adjust the margin-left as needed */
+    padding-top: 10rem;  /* changing the size of the titles h1, h2 */
+}
+
+#product-content h1 {
+    color: #000000; /* Black color for h1 */
+    font-size: 4rem; /* Adjust the font size as needed */
+}
+
+#product-content h2 {
+    color: #808080; /* Grey color for h2 */
+    font-size: 2.5rem; /* Adjust the font size as needed */
+}
+/* product content end h1,h2 */
+
+/* produckt display start */
+.product-display {
+    display: grid;
+    grid-template-columns: 1fr; /* Display as a column */
+    gap: 1rem;
+    margin-top: 40rem; /* Adjust the margin-top as needed */
+    margin-left: 1rem; /* Adjust the margin-left as needed */
+}
+
+.product-item {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    height: 240px; /* Set a fixed height or adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1rem; /* Adjust the margin-bottom as needed */
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* product display end  */
+
+
+.product-display {
+    display: grid;
+    grid-template-columns: 1fr; /* Display as a column */
+    gap: 1rem;
+    margin-top: 10rem; /* Adjust the margin-top as needed */
+    margin-left: 1rem; /* Adjust the margin-left as needed */
+}
+
+.product-item {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    height: 240px; /* Set a fixed height or adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1rem; /* Adjust the margin-bottom as needed */
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay::after {
+    content: '\2192'; /* Right arrow character */
+    font-size: 2rem;
+    color: #fff;
+}
+/* css scroll animation start */
+/* Container styles */
+.scrolling-text-container {
+    background-color: #eff5ff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+/* css scroll animation end */
+
+
+/* product display end  */
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1025px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Montserrat', 'Arial', sans-serif;
+      }
+
+
+      /* header-nav start */
+      #header {
+        /* background: #000000;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        height: 5rem;
+        width: 89.9rem;
+        position: fixed;
+        margin-top: -5rem; */
+        background: #000000;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        height: 5rem;
+        width: 89.9rem;
+        position: fixed;
+        margin-top: -5rem;
+
+
+      }
+      #header ul {
+        display: flex;
+      }
+      
+      #header ul li {
+        list-style: none;
+        padding: 15px 15px;
+      }
+      #header ul li a {
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s ease-in-out;
+        color: white;
+        font-weight: 400;
+        opacity: 1;
+
+      }
+      
+      #header ul li a:hover {
+        border-bottom: 3px solid red;
+      }
+      
+      #header ul li img {
+        margin-right: 30px;
+      }
+      
+      .logo-img {
+        color: #fff;
+        height: 10vh;
+        width: auto;
+        margin-top: -1rem;
+      }
+
+      .toggle {
+        display: none;
+      }
+      #header.active1 ul {
+        /* opacity: 1; */
+        top: 75px;
+      }
+    
+      #header ul li a {
+        margin: 5px 0;
+        font-size: 24px;
+        color: white;
+      }
+    /* header-nav end */
+
+
+/* product content start */
+
+
+.product{
+    
+}
+#product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5rem; /* Adjust the margin-top as needed */
+    margin-left: 5rem; /* Adjust the margin-left as needed */
+    padding-top: 10rem;  /* changing the size of the titels h1,h2 */
+  }
+  
+  #product-content h1 {
+    color: #000000; /* Black color for h1 */
+    font-size: 2rem; /* Adjust the font size as needed */
+  }
+  
+  #product-content h2 {
+    color: #808080; /* Grey color for h2 */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+  
+
+
+
+/* product display  start*/
+
+.product-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 5rem; /* Adjust the margin-top as needed */
+    margin-left: 1rem; /* Adjust the margin-left as needed */
+}
+
+.product-item {
+    position: relative;
+    width: 95%;
+    height: 200px; /* Set a fixed height or adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay::after {
+    content: '\2192'; /* Right arrow character */
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+
+
+/* css scroll animation start */
+/* Container styles */
+.scrolling-text-container {
+    background-color: #eff5ff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+/* css scroll animation end */
+
+/* product display end */
+
+
+
+
+
+
+
+
+/* product content end */
+
+
+
+
+
+}
